@@ -7,16 +7,21 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WorkComponent } from './work/work.component';
-import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angularx-social-login";
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 
 export function getAuthServiceConfig(){
-  let config = new AuthServiceConfig([{
+  let config = new AuthServiceConfig([
+  {
     id:GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("<GoogleClientIdJHere>")
-  }]);
+    provider: new GoogleLoginProvider("167664763050-g17oimomuvc1d39u0o6a5b6nh2emr5rd.apps.googleusercontent.com")
+  }/*,
+  {
+    id:FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider("")
+  }*/
+  ]);
   return config;
 }
-
 
 @NgModule({
   declarations: [

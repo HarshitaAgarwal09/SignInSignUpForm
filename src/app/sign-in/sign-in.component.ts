@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angula
 import {Router} from '@angular/router';
 import {User} from '../userdetail';
 import {RegistrationService} from '../registration.service';
+import { AuthService, GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+
 
 @Component({
   selector: 'app-sign-in',
@@ -11,16 +13,35 @@ import {RegistrationService} from '../registration.service';
 })
 export class SignInComponent implements OnInit {
   SigninForm: FormGroup;
-  constructor(private formbuilder:FormBuilder, private router:Router, private rs:RegistrationService) { }
+  constructor(private socialAuthService:AuthService, private formbuilder:FormBuilder, private router:Router, private rs:RegistrationService) { }
   userlist:User[];
   user:User;
   i = 0 ;
   foo = false ;
+
   ngOnInit() {
   	this.SigninForm = this.formbuilder.group(
   	{	email: ['',Validators.required],
   		password: ['', Validators.required]
   	});
+  }
+  
+  SocialSignIn(socialPlatform: string){
+
+    if(socialPlatform == "google"){
+      this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+        (userData) => {
+          console.log(userData);
+        }
+      )
+    }
+    /*if(socialPlatform == "facebook"){
+      this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID).then(
+        (userData) => {
+          console.log("signIndata", userData);
+        }
+      )
+    }*/
   }
   onSignin(){
     this.user=JSON.parse(JSON.stringify(this.SigninForm.value));

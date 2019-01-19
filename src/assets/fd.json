@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "firstname": "Harshita",
+      "lastname": "Agarwal",
+      "email": "harshitaagarwal98@yahoo.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "firstname": "Manju",
+      "lastname": "Agarwal",
+      "email": "mh@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "firstname": "H",
+      "lastname": "A",
+      "email": "ha@yahoo.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "firstname": "Harshita",
+      "lastname": "Agarwal",
+      "email": "harshitaagrawal98@yahoo.com",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "firstname": "Harshita",
+      "lastname": "Agarwal",
+      "email": "h",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "firstname": "Manju",
+      "lastname": "Agarwal",
+      "email": "ink.korean@gmail.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "firstname": "Manju\\",
+      "lastname": "Agarwal",
+      "email": "ink.korean@gmail.com",
+      "password": "",
+      "id": 7
+    }
+  ]
+}
