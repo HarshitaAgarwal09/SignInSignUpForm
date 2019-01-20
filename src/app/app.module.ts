@@ -14,11 +14,11 @@ export function getAuthServiceConfig(){
   {
     id:GoogleLoginProvider.PROVIDER_ID,
     provider: new GoogleLoginProvider("167664763050-g17oimomuvc1d39u0o6a5b6nh2emr5rd.apps.googleusercontent.com")
-  }/*,
+  },
   {
     id:FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("")
-  }*/
+    provider: new FacebookLoginProvider("762830430739908")
+  }
   ]);
   return config;
 }

@@ -11,10 +11,16 @@
 		<input type="password" class="form-control" formControlName="password">
 	</div>
 	
-	<div >
-		<button class="btn btn-success" (click)="onSignin()">SignIn</button><br>
-		<button class="btn btn-danger" (click)="SocialSignIn('google')">Sign In With Google</button><br>
-		<button class="btn btn-primary" (click)="SocialSignIn('facebook')">Sign In With Facebook</button><br>
-		<button class="btn btn-info" (click)="onSignup()">SignUp</button>
+	<div style="text-align: center;">
+		<button class="btn btn-success" (click)="onSignin()">SignIn</button>
+		<button class="btn btn-danger" (click)="SocialSignIn('google')">
+			<i class="fa fa-google"></i>
+			<span>  Sign In With Google</span>
+		</button>
+		<button class="btn btn-primary" (click)="SocialSignIn('facebook')">
+			<i class="fa fa-facebook"></i>
+			<span>  Sign In With Facebook</span>
+		</button>
+		<button class="btn btn-info" (click)="onSignup()">SignUp</button><br>
 	</div>
 </form>
